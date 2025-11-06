@@ -13,7 +13,7 @@ const AbacusMathSolver = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [answer, setAnswer] = useState<number | null>(null);
   
-  const timeoutRef = useRef(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Generate 8 numbers ensuring sum is positive and no intermediate sum is negative
   const generateNumbers = (): number[] => {
